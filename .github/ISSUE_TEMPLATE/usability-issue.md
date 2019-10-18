@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## Issue
+## Issue(s)
 
 ## Proposed solution(s)
 
