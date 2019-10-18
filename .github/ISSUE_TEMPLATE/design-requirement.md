@@ -1,5 +1,5 @@
 ---
-name: Design requirement
+name: Design Requirement
 about: A ticket template for detailing software requirements and design tasks.
 title: ''
 labels: ''
