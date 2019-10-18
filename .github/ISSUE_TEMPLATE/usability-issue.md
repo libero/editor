@@ -12,7 +12,7 @@ assignees: ''
 ## Proposed solution
 
 ## Tasks
-- [ ] Create initial design proposal
+- [ ] Create initial design proposal based on usability test report suggestion
 - [ ] Hold design review with relevant stakeholders
 - [ ] Usability test design 
 - [ ] Design approved by relevant stakeholders
