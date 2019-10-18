@@ -2,7 +2,7 @@
 name: Usability Issue
 about: A ticket template for detailing software usability issues and proposed fixes.
 title: ''
-labels: ''
+labels: Usability Issue
 assignees: ''
 
 ---
