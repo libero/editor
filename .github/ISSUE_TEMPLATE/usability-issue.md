@@ -20,3 +20,6 @@ assignees: ''
 
 ## Relevant information
 - TSXX finding and recommendations, [Texture Usability Test Report](https://docs.google.com/document/d/1z58LAJVuKLjFRVuTDigXNQ_XZFaXTXiQOSRsEMKND48/edit?usp=sharing)
+
+## DoD
+- [ ] A tested and approved design solution translated into backlog items for development
