@@ -9,7 +9,7 @@ assignees: ''
 
 ## Issue
 
-## Proposed solution
+## Proposed solution(s)
 
 ## Tasks
 - [ ] Create initial design proposal based on usability test report suggestion
