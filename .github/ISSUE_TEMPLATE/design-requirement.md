@@ -1,6 +1,6 @@
 ---
 name: Design requirement
-about: A ticket template for detailing software requirements and design tasks
+about: A ticket template for detailing software requirements and design tasks.
 title: ''
 labels: ''
 assignees: ''
