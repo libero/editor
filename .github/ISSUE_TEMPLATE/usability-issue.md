@@ -7,20 +7,16 @@ assignees: ''
 
 ---
 
-Issue: 
+## Issue
 
-Proposed solution: 
+## Proposed solution
 
+## Tasks
+- [ ] Create initial design proposal
+- [ ] Hold design review with relevant stakeholders
+- [ ] Usability test design 
+- [ ] Design approved by relevant stakeholders
+- [ ] Break designs down into development backlog items
 
-Tasks
-
-- Create initial design proposal
-- Hold design review with relevant stakeholders
-- Usability test design 
-- Design approved by relevant stakeholders
-- Break designs down into development backlog items
-
-
-Relevant information
-
-- TSXX finding and recommendations, Texture Usability Test Report
+## Relevant information
+- TSXX finding and recommendations, [Texture Usability Test Report](https://docs.google.com/document/d/1z58LAJVuKLjFRVuTDigXNQ_XZFaXTXiQOSRsEMKND48/edit?usp=sharing)
