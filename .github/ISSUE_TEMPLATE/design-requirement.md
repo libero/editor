@@ -21,6 +21,12 @@ As an Author I want... so that I ...
 ## User stories
 - As an author, I want... so that I...
 
+## Linked usability issues
+- linked usability issue
+
+## Questions to be addressed
+- does this design... 
+
 ## Linked requirements
 - linked item
 
