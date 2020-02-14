@@ -8,7 +8,7 @@ Libero Editor is a work in progress with Texture at its core. Texture is built b
 
 ## Contributing to Libero Editor
 
-_Guides for making feature requests and design suggestions_
+Guides for making feature requests and design suggestions.
 
 ### Feature Requests
 
