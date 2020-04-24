@@ -2,7 +2,7 @@
 
 Expedite your production workflow with our open tools and management system providing content quality control, author proofing and JATS XML export.
 
-Libero Editor is a work in progress with Texture at its core. Texture is built by Substance and provides a toolset designed for the production of scientific content - https://github.com/libero/texture
+Libero Editor is a work in progress with ProseMirror at its core. ProseMirror is an open source toolkit for building rich-text editors on the web - https://prosemirror.net/
 
 ---
 
