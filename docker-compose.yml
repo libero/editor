@@ -10,7 +10,7 @@ services:
     volumes:
       - './.localstack/startup:/docker-entrypoint-initaws.d:ro'
       - './.localstack/config:/etc/localstackconf:ro'
-      - './.localstack/articles:/tmp/articles:ro'
+      - './articles:/tmp/articles:ro'
     ports:
       - 4566:4566
     healthcheck:
