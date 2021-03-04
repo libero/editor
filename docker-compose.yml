@@ -1,16 +1,6 @@
 version: '3.5'
 
 services:
-  watchtower:
-    image: v2tec/watchtower
-    container_name: ${PREFIX-editor}-watchtower
-    restart: unless-stopped
-    volumes:
-      - '/etc/timezone:/etc/timezone:ro'
-      - '/etc/localtime:/etc/localtime:ro'
-      - '/var/run/docker.sock:/var/run/docker.sock'
-    command: --label-enable --cleanup --no-pull --interval 10
-
   localstack:
     image: localstack/localstack
     container_name: ${PREFIX-editor}-localstack
