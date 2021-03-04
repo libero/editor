@@ -6,6 +6,20 @@ Libero Editor is a work in progress with ProseMirror at its core. ProseMirror is
 
 ---
 
+## Quick Start
+
+If you want to try out the latest version of Libero Editor, then it's pretty simple to run an instance on you own machine. All you need is to install [Docker](https://www.docker.com/), and then...
+
+```
+git clone https://github.com/libero/editor.git
+cd editor
+docker-compose up
+```
+
+Then, visit http://localhost:4000 in your web browser.
+
+---
+
 ## Contributing to Libero Editor
 
 Guides for making feature requests and design suggestions.
