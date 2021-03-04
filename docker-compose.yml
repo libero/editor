@@ -54,8 +54,6 @@ services:
       - AWS_END_POINT=http://${PREFIX-editor}-localstack:4566
       - AWS_SRC_BUCKET=s3-editor-source-bucket
       - AWS_EDITOR_BUCKET=s3-editor-destination-bucket
-    labels:
-      - 'com.centurylinklabs.watchtower.enable=true'
 
   editor-client:
     image: liberoadmin/editor-client:${TAG-latest}
@@ -63,8 +61,6 @@ services:
     restart: unless-stopped
     depends_on:
       - editor-article-store
-    labels:
-      - 'com.centurylinklabs.watchtower.enable=true'
 
   nginx:
     image: nginx:alpine
@@ -76,16 +72,3 @@ services:
       - './src/nginx.conf:/etc/nginx/nginx.conf:ro'
     ports:
       - ${PORT-4000}:80
-
-  editor-importer:
-    build:
-      context: './file-watcher'
-    image: ${PREFIX-editor}-importer:latest
-    container_name: ${PREFIX-editor}-importer
-    depends_on:
-      - localstack
-    environment: 
-      - S3_BUCKET=s3-editor-source-bucket
-      - AWS_ENDPOINT=http://${PREFIX-editor}-localstack:4566
-    volumes: 
-      - './tmp/bucket:/bucket-to-watch:ro'
