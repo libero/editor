@@ -88,3 +88,7 @@ State your feature request as simply and clearly as possible so that your idea i
 #### Keep feedback constructive
 
 Voice your opinions clearly, constructively and calmly. Design feedback should ideally be measured against supporting user stories, taking the time to carefully work through the pros and cons of a proposed solution.
+
+## License
+
+Licensed under [MIT](https://github.com/libero/editor/blob/master/LICENSE.md)
