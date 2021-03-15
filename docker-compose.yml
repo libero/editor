@@ -70,7 +70,10 @@ services:
     depends_on:
       - editor-article-store
       - editor-client
+    environment:
+      - PREFIX=${PREFIX-editor}
+      - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
     volumes:
-      - './.nginx/nginx.conf:/etc/nginx/nginx.conf:ro'
+      - './.nginx:/etc/nginx/templates'
     ports:
       - ${PORT-4000}:80
