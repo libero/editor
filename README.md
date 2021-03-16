@@ -16,7 +16,22 @@ cd editor
 docker-compose up
 ```
 
-Then, visit http://localhost:4000 in your web browser.
+Startup will take around 20 seconds, then visit http://localhost:4000 in your web browser.
+
+## Cleaning Up
+
+Once you've had enough, or if you want discard any changes that you've made, then run...
+
+```
+docker-compose rm
+```
+## Trying Your Own Content
+
+**NOTE:** Libero Editor is still under development, and hence your mileage will vary when testing your own content. If you do encounter any issues then please feel free to raise a bug [here](https://github.com/libero/editor/issues/new/choose).
+
+If you would like to try the Editor with your own JATS XML content, then take your XML and any other assets and place them in a folder that follows the naming scheme `<journal>-<id>-<version>`, e.g. `libero-12345-v1`. Next, ZIP the folder following the same naming scheme, e.g `libero-12345-v1.zip` and then copy/move the archive to the `articles` directory in this repository.
+
+Lastly, using the instructions above start the Editor and navigate to http://localhost:4000 adding the `articleId` query parameter and setting the value to the `<id>` you used above, e.g. http://localhost:4000?articleId=12345.
 
 ---
 
