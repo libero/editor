@@ -1,0 +1,10 @@
+{
+  "QueueConfigurations": [
+    {
+      "QueueArn": "http://localhost:4566/000000000000/EditorImportQueue",
+        "Events": [
+          "s3:ObjectCreated:*"
+        ]
+    }
+  ]
+}
