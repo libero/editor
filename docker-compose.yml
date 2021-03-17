@@ -74,6 +74,6 @@ services:
       - PREFIX=${PREFIX-editor}
       - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
     volumes:
-      - './.nginx:/etc/nginx/templates'
+      - './.nginx:/etc/nginx/templates:ro'
     ports:
       - ${PORT-4000}:80
