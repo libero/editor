@@ -49,9 +49,9 @@ services:
       - DB_NAME=editor
       - DB_USER=root
       - DB_PASSWORD=password
-      - AWS_REGION=eu-west-1
-      - AWS_ACCESS_KEY=key
-      - AWS_SECRET_ACCESS_KEY=secret
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY=test
+      - AWS_SECRET_ACCESS_KEY=test
       - AWS_BUCKET_INPUT_EVENT_QUEUE_URL=http://${PREFIX-editor}-localstack:4566/000000000000/EditorImportQueue
       - AWS_ENDPOINT=http://${PREFIX-editor}-localstack:4566
       - AWS_SRC_BUCKET=s3-editor-source-bucket
