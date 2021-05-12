@@ -13,12 +13,6 @@ services:
       - './articles:/tmp/articles:ro'
     ports:
       - 4566:4566
-    healthcheck:
-      test: 'echo -e "GET /health\n\n" | nc ${PREFIX-editor}-localstack 4566'
-      interval: 1m
-      timeout: 10s
-      retries: 3
-      start_period: 60s
 
   mongo:
     image: mongo
@@ -29,12 +23,6 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=password
     ports:
       - 27017:27017
-    healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo ${PREFIX-editor}-mongo:27017/test --quiet
-      interval: 10s
-      timeout: 10s
-      retries: 3
-      start_period: 20s
 
   editor-article-store:
     image: liberoadmin/editor-article-store:${TAG-latest}
