@@ -68,6 +68,7 @@ services:
     environment:
       - PREFIX=${PREFIX-editor}
       - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1
     volumes:
       - './.nginx:/etc/nginx/templates:ro'
     ports:
