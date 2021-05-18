@@ -56,6 +56,13 @@ services:
       - AWS_ENDPOINT=http://${PREFIX-editor}-localstack:4566
       - AWS_SRC_BUCKET=s3-editor-source-bucket
       - AWS_EDITOR_BUCKET=s3-editor-destination-bucket
+      - IMPORT_TRANSFORM_ENABLED=true
+      - IMPORT_TRANSFORM_URL=http://transformer:8984/v1tov2
+  transformer:
+    container_name: transformer
+    image: elifesciences/basex-transformer:latest
+    ports:
+      - 8984:8984
 
   editor-client:
     image: liberoadmin/editor-client:${TAG-latest}
