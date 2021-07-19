@@ -109,6 +109,4 @@ services:
     environment:
       MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
     volumes:
-      - type: bind
-        source: ./.mockserver
-        target: /config
+          - './.mockserver:/config:ro'
