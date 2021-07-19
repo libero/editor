@@ -90,14 +90,23 @@ services:
     container_name: ${PREFIX-editor}-pdf-service
     depends_on:
       - editor-article-store
+    ports:
+      - 4001:4001
     environment:
       - ARTICLE_STORE_PATH=http://${PREFIX-editor}-article-store:8080/articles/
       - GENERATION_RESOURCES_PATH=http://nginx:80/api/v1/articles/
       - PORT=4001
       # TODO: UPDATE THESE VALUES TO BE MOCK SERVICE ENDPOINTS
-      - GENERATION_START_URL=http://some-mock-service:4002/pdf-generation/start
-      - GENERATION_STATUS_URL=http://editor-mocks:4002/pdf-generation/status
+      - GENERATION_START_URL=http://editor-mock-service:1080/pdf-generation/start
+      - GENERATION_STATUS_URL=http://editor-mock-service:1080/pdf-generation/status
       - GENERATION_API_KEY=mySuperSecretApiKey
 
-
-  
+  mockServer:
+    image: mockserver/mockserver:mockserver-5.11.1
+    container_name: ${PREFIX-editor}-mock-service
+    ports:
+      - 1080:1080
+    environment:
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
+    volumes:
+          - './.mockserver:/config:ro'

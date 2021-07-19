@@ -1,0 +1,36 @@
+[
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/pdf-generation/start",
+      "body": {}
+    },
+    "httpResponse": {
+      "body": "{\"status\": {\"code\": 200,\"message\": \"job created successfully\"},\"message\": {\"jobid\": \"4b111882-d0e8-4d3d-8ef2-043ac3751ea2\"}}",
+      "statusCode": 200
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/pdf-generation/status"
+    },
+    "httpResponse": {
+      "body": "{\"status\": { \"code\": 200, \"message\": { \"id\": \"385ae272-e98e-47d9-83f5-c3ded54ab467\", \"lastUpdatedTime\": 1620885422660, \"status\": \"in-progress\" }}}",
+      "statusCode": 200
+    },
+    "times": {
+      "remainingTimes": 5
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/pdf-generation/status"
+    },
+    "httpResponse": {
+      "body": "{\"status\": { \"code\": 200, \"message\": { \"id\": \"385ae272-e98e-47d9-83f5-c3ded54ab467\", \"lastUpdatedTime\": 1620885422660, \"status\": \"completed\" }}}",
+      "statusCode": 200
+    }
+  }
+]
