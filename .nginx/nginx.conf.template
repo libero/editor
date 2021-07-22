@@ -15,6 +15,12 @@ http {
         proxy_redirect http://${PREFIX}-localstack:4566/ http://localhost:4566/;
    }
 
+    location /pdf {
+      rewrite /pdf/(.*) /$1  break;
+      proxy_pass http://${PREFIX}-pdf-service:4001/;
+      proxy_set_header Host $host;
+   }
+
    location / {
        proxy_pass http://${PREFIX}-client:80/;
        proxy_set_header Host $host;
