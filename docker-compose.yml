@@ -13,12 +13,6 @@ services:
       - './articles:/tmp/articles:ro'
     ports:
       - 4566:4566
-    healthcheck:
-      test: 'echo -e "GET /health\n\n" | nc ${PREFIX-editor}-localstack 4566'
-      interval: 1m
-      timeout: 10s
-      retries: 3
-      start_period: 60s
 
   mongo:
     image: mongo
@@ -29,12 +23,6 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=password
     ports:
       - 27017:27017
-    healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo ${PREFIX-editor}-mongo:27017/test --quiet
-      interval: 10s
-      timeout: 10s
-      retries: 3
-      start_period: 20s
 
   editor-article-store:
     image: liberoadmin/editor-article-store:${TAG-latest}
@@ -49,9 +37,9 @@ services:
       - DB_NAME=editor
       - DB_USER=root
       - DB_PASSWORD=password
-      - AWS_REGION=eu-west-1
-      - AWS_ACCESS_KEY=key
-      - AWS_SECRET_ACCESS_KEY=secret
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY=test
+      - AWS_SECRET_ACCESS_KEY=test
       - AWS_BUCKET_INPUT_EVENT_QUEUE_URL=http://${PREFIX-editor}-localstack:4566/000000000000/EditorImportQueue
       - AWS_ENDPOINT=http://${PREFIX-editor}-localstack:4566
       - AWS_SRC_BUCKET=s3-editor-source-bucket
@@ -80,6 +68,7 @@ services:
     environment:
       - PREFIX=${PREFIX-editor}
       - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1
     volumes:
       - './.nginx:/etc/nginx/templates:ro'
     ports:
