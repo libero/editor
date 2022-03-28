@@ -1,3 +1,10 @@
+# ⚠️ Under new stewardship
+eLife have handed over stewardship of Libero Edtior to The Coko Foundation. You can now find the updated code repository at https://gitlab.coko.foundation/libero/editor and continue the conversation on Coko's Mattermost chat server: https://mattermost.coko.foundation/
+
+For more information on why we're doing this read our latest update on our new technology direction: https://elifesciences.org/inside-elife/daf1b699/elife-latest-announcing-a-new-technology-direction
+
+---
+
 # Libero Editor
 
 Expedite your production workflow with our open tools and management system providing content quality control, author proofing and JATS XML export.
